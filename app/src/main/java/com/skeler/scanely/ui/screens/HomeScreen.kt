@@ -15,11 +15,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SheetValue
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.material3.rememberBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -55,7 +56,6 @@ import com.skeler.scanely.ui.components.rememberMultiGalleryPicker
 import com.skeler.scanely.ui.viewmodel.AiScanViewModel
 import com.skeler.scanely.ui.viewmodel.OcrViewModel
 import com.skeler.scanely.ui.viewmodel.UnifiedScanViewModel
-import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -70,7 +70,10 @@ fun HomeScreen() {
 
     val snackbarHostState = remember { SnackbarHostState() }
     var showAiBottomSheet by remember { mutableStateOf(false) }
-    val aiSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val aiSheetState = rememberBottomSheetState(
+        initialValue = SheetValue.Hidden,
+        enabledValues = setOf(SheetValue.Hidden, SheetValue.Expanded)
+    )
     var pendingAiMode by remember { mutableStateOf<AiMode?>(null) }
     var pendingAiProvider by remember { mutableStateOf(AiProvider.DEFAULT) }
 
@@ -107,7 +110,8 @@ fun HomeScreen() {
                     uri,
                     android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION
                 )
-            } catch (_: Exception) { }
+            } catch (_: Exception) {
+            }
             if (scanViewModel.triggerAiWithRateLimit(provider) {
                     scanViewModel.onNewScanSelected()
                     aiViewModel.processMultipleFiles(listOf(uri), mode, provider)
@@ -137,7 +141,8 @@ fun HomeScreen() {
                     uri,
                     android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION
                 )
-            } catch (_: Exception) { }
+            } catch (_: Exception) {
+            }
             aiViewModel.clearResult()
             ocrViewModel.clearResult()
             scanViewModel.onNewScanSelected()

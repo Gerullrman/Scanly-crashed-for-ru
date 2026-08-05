@@ -36,7 +36,6 @@ import androidx.compose.material3.LargeTopAppBar
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SwipeToDismissBox
-import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBarDefaults
@@ -181,19 +180,14 @@ fun HistoryScreen() {
             ) {
                 items(historyItems, key = { it.id }) { item ->
                     val dismissState = rememberSwipeToDismissBoxState(
-                        confirmValueChange = { value ->
-                            if (value == SwipeToDismissBoxValue.EndToStart) {
-                                historyViewModel.deleteItem(item.id)
-                                true
-                            } else {
-                                false
-                            }
-                        },
-                        positionalThreshold = { totalDistance -> totalDistance * 0.5f }
+                        positionalThreshold = { totalDistance -> totalDistance * 0.75f }
                     )
 
                     SwipeToDismissBox(
                         state = dismissState,
+                        onDismiss = {
+                            historyViewModel.deleteItem(item.id)
+                        },
                         backgroundContent = {
                             Box(
                                 modifier = Modifier

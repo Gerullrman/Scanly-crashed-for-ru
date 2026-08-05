@@ -35,8 +35,9 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.SheetValue
 import androidx.compose.material3.Text
-import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.material3.rememberBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
@@ -95,8 +96,14 @@ fun BarcodeScannerScreen(
     var showActionsSheet by remember { mutableStateOf(false) }
     var textToShow by remember { mutableStateOf<String?>(null) }
     var isProcessingGallery by remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val textSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val sheetState = rememberBottomSheetState(
+        initialValue = SheetValue.Hidden,
+        enabledValues = setOf(SheetValue.Hidden, SheetValue.Expanded)
+    )
+    val textSheetState = rememberBottomSheetState(
+        initialValue = SheetValue.Hidden,
+        enabledValues = setOf(SheetValue.Hidden, SheetValue.Expanded)
+    )
 
     var showProductSheet by remember { mutableStateOf(false) }
     var lookupResult by remember { mutableStateOf<LookupResult?>(null) }
@@ -218,7 +225,12 @@ fun BarcodeScannerScreen(
                             modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(Icons.Rounded.PhotoLibrary, null, tint = Color.White, modifier = Modifier.size(18.dp))
+                            Icon(
+                                Icons.Rounded.PhotoLibrary,
+                                null,
+                                tint = Color.White,
+                                modifier = Modifier.size(18.dp)
+                            )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
                                 text = if (isProcessingGallery) "Scanning..." else "Upload from gallery",
@@ -269,9 +281,11 @@ fun BarcodeScannerScreen(
                             showActionsSheet = false
                             textToShow = action.text
                         }
+
                         is ScanAction.LookupProduct -> {
                             lookupProduct(action.barcode)
                         }
+
                         else -> {
                             showActionsSheet = false
                             ActionExecutor.execute(context, action)
@@ -290,7 +304,8 @@ fun BarcodeScannerScreen(
             TextDetailSheet(
                 text = text,
                 onCopy = {
-                    val clipboard = context.getSystemService(android.content.ClipboardManager::class.java)
+                    val clipboard =
+                        context.getSystemService(android.content.ClipboardManager::class.java)
                     clipboard.setPrimaryClip(ClipData.newPlainText("Barcode Content", text))
                     Toast.makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT).show()
                 },

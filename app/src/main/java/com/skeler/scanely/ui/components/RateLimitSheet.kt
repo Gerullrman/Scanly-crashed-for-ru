@@ -16,9 +16,9 @@ import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.LinearWavyProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.SheetState
+import androidx.compose.material3.SheetValue
 import androidx.compose.material3.Text
-import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.material3.rememberBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -38,8 +38,11 @@ fun RateLimitSheet(
     modifier: Modifier = Modifier,
     adAvailable: Boolean = false,
     onWatchAd: (() -> Unit)? = null,
-    sheetState: SheetState = rememberModalBottomSheetState()
 ) {
+    val sheetState = rememberBottomSheetState(
+        initialValue = SheetValue.Hidden,
+        enabledValues = setOf(SheetValue.Hidden, SheetValue.Expanded)
+    )
     val targetProgress = 1f - (remainingSeconds.toFloat() / RATE_LIMIT_SECONDS)
     val animatedProgress by animateFloatAsState(
         targetValue = targetProgress,
@@ -73,8 +76,8 @@ fun RateLimitSheet(
 
             Text(
                 text = "Scanly's AI runs on the developer's free-tier keys — shared " +
-                    "across Gemini, Mistral OCR, OpenRouter and Hugging Face — " +
-                    "so scans pause for a moment when they get busy.",
+                        "across Gemini, Mistral OCR, OpenRouter and Hugging Face — " +
+                        "so scans pause for a moment when they get busy.",
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
@@ -84,8 +87,8 @@ fun RateLimitSheet(
 
             Text(
                 text = "Add your own key for any provider in Settings → AI Providers to " +
-                    "remove this limit entirely. Even a free tier works — it just runs " +
-                    "on your quota instead of the shared one.",
+                        "remove this limit entirely. Even a free tier works — it just runs " +
+                        "on your quota instead of the shared one.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
