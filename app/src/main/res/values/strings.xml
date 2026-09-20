@@ -1,3 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- ============================================================
+         APPLICATION
+         ============================================================ -->
     <string name="app_name">Scanly</string>
+
+    <!-- ============================================================
+         HOME SCREEN
+         ============================================================ -->
+    <string name="home_title">What would you like to scan?</string>
+    <string name="home_scan_document">Scan Document</string>
+    <string name="home_scan_document_subtitle">Auto-crop, enhance &amp; export PDF</string>
+    <string name="home_from_gallery">From Gallery</string>
+    <string name="home_from_gallery_subtitle">Import image file</string>
+    <string name="home_extract_pdf">Extract PDF</string>
+    <string name="home_extract_pdf_subtitle">Import PDF document</string>
+    <string name="home_scan_barcode">Scan Barcode/QR</string>
+    <string name="home_scan_barcode_subtitle">Scan QR, Barcodes &amp; More</string>
+    <string name="home_view_previous">View Previous Extracts</string>
+    <string name="home_ai_scan">AI Scan</string>
+    <string name="home_settings">Settings</string>
+
+    <!-- ============================================================
+         RESULTS SCREEN
+         ============================================================ -->
+    <string name="results_title">Results</string>
+    <string name="results_extracted_text">Extracted Text</string>
+    <string name="results_original">Original</string>
+    <string name="results_markdown">Markdown</string>
+    <string name="results_summary">Summary</string>
+    <string name="results_summary_with_length">Summary · %1$s</string>
+    <string name="results_copy">Copy</string>
+    <string name="results_edit">Edit text</string>
+    <string name="results_print">Print</string>
+    <string name="results_export">Export</string>
+    <string name="results_save">Save</string>
+    <string name="results_cancel">Cancel</string>
+    <string name="results_back">Back</string>
+    <string name="results_rescan">Rescan</string>
+    <string name="results_copied_to_clipboard">Copied to clipboard</string>
+    <string name="results_words_characters">%1$d words · %2$d characters</string>
+    <string name="results_no_text_extracted">No text extracted</string>
+    <string name="results_try_different_image">Try selecting a different image</string>
+    <string name="results_no_text_or_barcodes">No text or barcodes detected</string>
+
+    <!-- Summary lengths -->
+    <string name="summary_length_short">Short</string>
+    <string name="summary_length_medium">Medium</string>
+    <string name="summary_length_detailed">Detailed</string>
+
+    <!-- ============================================================
+         TEXT COMPOSE SCREEN
+         ============================================================ -->
+    <string name="compose_title">Text to PDF</string>
+    <string name="compose_placeholder">Start typing…</string>
+    <string name="compose_export">Export</string>
+
+    <!-- ============================================================
+         SCAN REVIEW SCREEN
+         ============================================================ -->
+    <string name="review_title">Review scan</string>
+    <string name="review_page_summary">Page %1$d of %2$d</string>
+    <string name="review_single_page">1 page</string>
+    <string name="review_no_pages">No pages</string>
+    <string name="review_enhance">Enhance</string>
+    <string name="review_save_or_share">Save or share</string>
+    <string name="review_save_or_share_subtitle">PDF, Word or images in your gallery</string>
+    <string name="review_rotate">Rotate page</string>
+    <string name="review_delete_page">Delete page</string>
+    <string name="review_delete_page_title">Delete page %1$d?</string>
+    <string name="review_delete_page_message">This page won\'t be included in your export. You can rescan it at any time.</string>
+    <string name="review_delete">Delete</string>
+    <string name="review_keep">Keep</string>
+    <string name="review_nothing_left">Nothing left to review</string>
+    <string name="review_nothing_left_message">Every page was deleted. Scan again to start over.</string>
+    <string name="review_back_to_scanner">Back to scanner</string>
+
+    <!-- Export sheet -->
+    <string name="export_pdf_document">PDF document</string>
+    <string name="export_pdf_document_subtitle">%1$s in one file · opens after saving</string>
+    <string name="export_word_document">Word document</string>
+    <string name="export_word_document_subtitle">%1$s as .docx, one scan per page</string>
+    <string name="export_images_to_gallery">Images to gallery</string>
+    <string name="export_images_to_gallery_subtitle">%1$s as JPEG in your Scanly album</string>
+
+    <!-- Filters -->
+    <string name="filter_original">Original</string>
+    <string name="filter_auto">Auto</string>
+    <string name="filter_magic_color">Magic Color</string>
+    <string name="filter_black_white">Black &amp; White</string>
+    <string name="filter_grayscale">Grayscale</string>
+
+    <!-- ============================================================
+         CAMERA SCREEN
+         ============================================================ -->
+    <string name="camera_title">Capture document</string>
+    <string name="camera_hint">Tap to focus · line the page up with the edges</string>
+    <string name="camera_close">Close</string>
+    <string name="camera_capture">Capture</string>
+    <string name="camera_permission_required">Camera permission required.</string>
+    <string name="camera_capture_failed">Couldn\'t capture — try again</string>
+
+    <!-- ============================================================
+         BARCODE SCANNER SCREEN
+         ============================================================ -->
+    <string name="barcode_hint">Point camera at barcode or QR code\nPinch to zoom · tap to focus</string>
+    <string name="barcode_upload_gallery">Upload from gallery</string>
+    <string name="barcode_scanning">Scanning...</string>
+    <string name="barcode_no_barcode_found">No barcode found</string>
+    <string name="barcode_camera_permission_required">Camera permission required\nfor barcode scanning.</string>
+    <string name="barcode_detected">Barcode Detected</string>
+    <string name="barcode_content">Barcode Content</string>
+    <string name="barcode_copy_to_clipboard">Copy to Clipboard</string>
+
+    <!-- ============================================================
+         SETTINGS SCREEN
+         ============================================================ -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_customize">Customize</string>
+    <string name="settings_look_and_feel">Look &amp; Feel</string>
+    <string name="settings_look_and_feel_subtitle">Color palette, dark theme, pure black</string>
+    <string name="settings_ai_providers">AI Providers</string>
+    <string name="settings_ai_providers_subtitle">API keys for AI scanning</string>
+    <string name="settings_text_recognition">Text Recognition</string>
+    <string name="settings_text_recognition_subtitle">%1$s · scripts &amp; preprocessing</string>
+    <string name="settings_barcode_engine">Barcode Scanner Engine</string>
+    <string name="settings_about">About</string>
+    <string name="settings_source_code">Source code</string>
+    <string name="settings_telegram">Telegram</string>
+    <string name="settings_telegram_subtitle">Report bugs or request features</string>
+    <string name="settings_contributors">Contributors</string>
+    <string name="settings_version">Scanly %1$s (%2$d)</string>
+
+    <!-- ============================================================
+         LOOK &amp; FEEL SCREEN
+         ============================================================ -->
+    <string name="look_and_feel_title">Look &amp; Feel</string>
+    <string name="look_and_feel_pick_palette">Pick a palette to recolor the whole app</string>
+    <string name="look_and_feel_color_palette">Color palette</string>
+    <string name="look_and_feel_dynamic">Dynamic</string>
+    <string name="look_and_feel_personalize">Personalize</string>
+    <string name="look_and_feel_dark_theme">Dark theme</string>
+    <string name="look_and_feel_dark_theme_on">On</string>
+    <string name="look_and_feel_dark_theme_off">Off</string>
+    <string name="look_and_feel_pure_black">Pure Black M3</string>
+    <string name="look_and_feel_pure_black_subtitle">Save battery on OLED displays</string>
+    <string name="look_and_feel_wallpaper_colors">Wallpaper colors</string>
+
+    <!-- Palette names -->
+    <string name="palette_rose_blush">Rose Blush</string>
+    <string name="palette_cerulean_wave">Cerulean Wave</string>
+    <string name="palette_lavender_volt">Lavender Volt</string>
+    <string name="palette_amethyst_haze">Amethyst Haze</string>
+    <string name="palette_emerald_grove">Emerald Grove</string>
+    <string name="palette_sunset_coral">Sunset Coral</string>
+
+    <!-- ============================================================
+         AI PROVIDERS SCREEN
+         ============================================================ -->
+    <string name="providers_title">AI Providers</string>
+    <string name="providers_intro">Bring your own key. Keys are stored only on this device and used for the provider you pick when starting an AI scan.</string>
+    <string name="providers_bundled_note">%1$s still use the bundled free-tier key, shared with everyone. Add your own key to a provider to use your personal quota.</string>
+    <string name="providers_section_providers">Providers</string>
+    <string name="providers_section_advanced">Advanced</string>
+    <string name="providers_section_fallback">Fallback</string>
+    <string name="providers_fallback_title">Fall back to other providers</string>
+    <string name="providers_fallback_subtitle">If your selected provider fails, try other configured providers instead of stopping. Off by default — your chosen provider is always used exactly.</string>
+    <string name="providers_api_key">API key</string>
+    <string name="providers_api_token">API token</string>
+    <string name="providers_model">Model</string>
+    <string name="providers_endpoint_url">Endpoint URL</string>
+    <string name="providers_account_id">Account ID</string>
+    <string name="providers_show_key">Show key</string>
+    <string name="providers_hide_key">Hide key</string>
+    <string name="providers_verify_key">Verify key</string>
+    <string name="providers_verifying">Verifying…</string>
+    <string name="providers_verified">Verified</string>
+    <string name="providers_invalid">Invalid</string>
+    <string name="providers_unverified">Unverified</string>
+    <string name="providers_retry">Retry</string>
+    <string name="providers_get_key">Get %1$s key</string>
+    <string name="providers_get_cloudflare_token">Get Cloudflare token</string>
+    <string name="providers_required">Required — this provider has no default model</string>
+    <string name="providers_required_cloudflare">Required — Cloudflare needs your Account ID as well as the token</string>
+    <string name="providers_url_hint">Enter a full https:// endpoint URL</string>
+    <string name="providers_will_call">Will call %1$s</string>
+
+    <!-- Provider descriptions -->
+    <string name="provider_gemini_desc">Google AI · works out of the box. Add a key to use your own quota.</string>
+    <string name="provider_mistral_desc">Dedicated OCR model · fast, accurate document text. Free tier included.</string>
+    <string name="provider_openrouter_desc">One key, many models.</string>
+    <string name="provider_huggingface_desc">Qwen OCR via HF Inference Providers. Free tier included.</string>
+    <string name="provider_nvidia_desc">NVIDIA NIM · vision models on NVIDIA\'s API. Free tier included.</string>
+    <string name="provider_groq_desc">Groq LPU · very fast inference. Free tier included.</string>
+    <string name="provider_cerebras_desc">Cerebras · ultra-fast Gemma-4 vision inference. Free tier included.</string>
+    <string name="provider_openai_desc">GPT vision models.</string>
+    <string name="provider_claude_desc">Anthropic vision models.</string>
+    <string name="provider_cloudflare_desc">Workers AI · vision on Cloudflare\'s edge. Free tier included; add your own Account ID + token to use your quota.</string>
+    <string name="provider_custom_desc">Any OpenAI-compatible chat/completions API.</string>
+
+    <!-- ============================================================
+         TEXT RECOGNITION SCREEN
+         ============================================================ -->
+    <string name="ocr_title">Text Recognition</string>
+    <string name="ocr_section_engine">Engine</string>
+    <string name="ocr_section_script">Script</string>
+    <string name="ocr_section_preprocessing">Preprocessing</string>
+    <string name="ocr_section_structure">Document structure</string>
+    <string name="ocr_engine_paddle_desc">Higher accuracy, 50+ languages, fully offline</string>
+    <string name="ocr_engine_mlkit_desc">Google\'s on-device recognizer, fastest</string>
+    <string name="ocr_auto_rotate">Auto-rotate page</string>
+    <string name="ocr_auto_rotate_subtitle">Detects sideways and upside-down pages</string>
+    <string name="ocr_fix_flipped">Fix flipped lines</string>
+    <string name="ocr_fix_flipped_subtitle">For pages mixing upright and upside-down lines.</string>
+    <string name="ocr_flatten_curved">Flatten curved pages</string>
+    <string name="ocr_flatten_curved_download">UVDoc dewarping · 30 MB download</string>
+    <string name="ocr_flatten_curved_active">UVDoc dewarping — slower, for books and folds</string>
+    <string name="ocr_detect_layout">Detect layout</string>
+    <string name="ocr_detect_layout_subtitle">Headings, paragraphs and reading order in the Markdown view</string>
+    <string name="ocr_recognize_tables">Recognize tables</string>
+    <string name="ocr_recognize_tables_download">SLANet tables · 8 MB download</string>
+    <string name="ocr_recognize_tables_active">Rebuilds tables as grids you can export to CSV</string>
+    <string name="ocr_downloading_progress">Downloading %1$d%%</string>
+    <string name="ocr_delete_pack">Delete %1$s</string>
+    <string name="ocr_download_pack">Download %1$s</string>
+
+    <!-- ============================================================
+         BARCODE ENGINE DIALOG
+         ============================================================ -->
+    <string name="barcode_engine_title">Barcode Scanner Engine</string>
+    <string name="barcode_engine_mlkit_desc">Google\'s on-device scanner with auto-zoom</string>
+    <string name="barcode_engine_zxing_desc">Open-source decoder, works without GMS</string>
+    <string name="barcode_engine_done">Done</string>
+
+    <!-- ============================================================
+         HISTORY SCREEN
+         ============================================================ -->
+    <string name="history_title">History</string>
+    <string name="history_clear_all">Clear All</string>
+    <string name="history_no_history">No history yet</string>
+    <string name="history_clear_confirm_title">Clear History</string>
+    <string name="history_clear_confirm_message">Are you sure you want to delete all history? This action cannot be undone.</string>
+    <string name="history_delete_all">Delete All</string>
+    <string name="history_cancel">Cancel</string>
+    <string name="history_delete">Delete</string>
+
+    <!-- ============================================================
+         RATE LIMIT SHEET
+         ============================================================ -->
+    <string name="rate_limit_title">Free scans need a breather</string>
+    <string name="rate_limit_message">Scanly\'s AI runs on the developer\'s free-tier keys — shared across providers — so scans pause for a moment when they get busy.</string>
+    <string name="rate_limit_add_key">Add your own key for any provider in Settings → AI Providers to remove this limit entirely. Even a free tier works — it just runs on your quota instead of the shared one.</string>
+    <string name="rate_limit_remaining">%1$s remaining</string>
+    <string name="rate_limit_watch_ad">Watch an ad for 1 extra scan</string>
+    <string name="rate_limit_no_ad">No ad available right now</string>
+    <string name="rate_limit_dismiss">Dismiss</string>
+
+    <!-- ============================================================
+         AI MODE BOTTOM SHEET
+         ============================================================ -->
+    <string name="ai_scan_title">AI Scan</string>
+    <string name="ai_scan_provider">PROVIDER</string>
+    <string name="ai_scan_extract_text">Extract Text</string>
+    <string name="ai_scan_extract_text_subtitle">Extract visible text from image</string>
+    <string name="ai_scan_extract_pdf">Extract PDF</string>
+    <string name="ai_scan_extract_pdf_subtitle">AI-powered PDF and text file extraction</string>
+
+    <!-- ============================================================
+         PROCESSING STATES
+         ============================================================ -->
+    <string name="processing_preparing">Preparing…</string>
+    <string name="processing_uploading">Uploading…</string>
+    <string name="processing_processing">Processing…</string>
+    <string name="processing_generating">Generating…</string>
+    <string name="processing_complete">Complete</string>
+    <string name="processing_extracting_files">Extracting text from %1$d files…</string>
+    <string name="processing_extracting">Extracting text...</string>
+    <string name="processing_files_one_request">%1$d files in one request</string>
+    <string name="processing_may_take">This may take a few moments</string>
+    <string name="processing_translating">Translating...</string>
+    <string name="processing_summarizing">Summarizing...</string>
+
+    <!-- ============================================================
+         EXPORT MENU
+         ============================================================ -->
+    <string name="export_save_pdf">Save as PDF</string>
+    <string name="export_save_word">Save as Word (.docx)</string>
+    <string name="export_save_markdown">Save as Markdown</string>
+    <string name="export_save_csv">Save as CSV</string>
+    <string name="export_save_json">Save as JSON</string>
+    <string name="export_no_table">No table</string>
+    <string name="export_nothing">Nothing to export</string>
+    <string name="export_no_table_data">No table data to export</string>
+    <string name="export_saved">Saved to Downloads/Scanly</string>
+    <string name="export_failed">Couldn\'t save %1$s</string>
+
+    <!-- Export name dialog -->
+    <string name="export_dialog_title">Name your file</string>
+    <string name="export_dialog_label">File name</string>
+    <string name="export_dialog_hint">Suggested from the scanned text, entirely on your device.</string>
+    <string name="export_dialog_save">Save</string>
+    <string name="export_dialog_cancel">Cancel</string>
+
+    <!-- ============================================================
+         CREDENTIAL BADGE
+         ============================================================ -->
+    <string name="credential_built_in">Built-in</string>
+    <string name="credential_your_key">Your key</string>
+
+    <!-- ============================================================
+         PRODUCT DETAILS
+         ============================================================ -->
+    <string name="product_looking_up">Looking up product...</string>
+    <string name="product_not_found">Product Not Found</string>
+    <string name="product_searched">Searched: %1$s</string>
+    <string name="product_lookup_failed">Lookup Failed</string>
+    <string name="product_unknown_error">Unknown error</string>
+    <string name="product_unknown_name">Unknown Product</string>
+    <string name="product_via">via %1$s</string>
+
+    <!-- Product sections — Food -->
+    <string name="product_nutri_score">Nutri-Score</string>
+    <string name="product_nova_group">NOVA Group</string>
+    <string name="product_nutrition_facts">Nutrition Facts</string>
+    <string name="product_serving_size">Serving size: %1$s</string>
+    <string name="product_ingredients">Ingredients</string>
+    <string name="product_allergens">Allergens</string>
+    <string name="product_calories">Calories</string>
+    <string name="product_fat">Fat</string>
+    <string name="product_carbs">Carbs</string>
+    <string name="product_protein">Protein</string>
+    <string name="product_sugar">Sugar</string>
+    <string name="product_salt">Salt</string>
+    <string name="product_fiber">Fiber</string>
+    <string name="product_no_nutrition">No detailed nutrition information available for this product.</string>
+
+    <!-- Product sections — Book -->
+    <string name="product_authors">Authors</string>
+    <string name="product_publisher">Publisher</string>
+    <string name="product_published">Published</string>
+    <string name="product_pages">Pages</string>
+    <string name="product_language">Language</string>
+    <string name="product_categories">Categories</string>
+    <string name="product_isbn13">ISBN-13: %1$s</string>
+    <string name="product_isbn10">ISBN-10: %1$s</string>
+    <string name="product_no_book_info">No detailed information available for this book.</string>
+
+    <!-- Product sections — Medicine -->
+    <string name="product_generic_name">Generic Name</string>
+    <string name="product_manufacturer">Manufacturer</string>
+    <string name="product_active_ingredients">Active Ingredients</string>
+    <string name="product_dosage_form">Dosage Form</string>
+    <string name="product_route">Route</string>
+    <string name="product_warnings">Warnings</string>
+    <string name="product_contraindications">Contraindications</string>
+    <string name="product_indications">Indications</string>
+    <string name="product_fda_approved">FDA approved: %1$s</string>
+    <string name="product_recalled">⚠️ This product has been recalled by the FDA.</string>
+    <string name="product_no_medicine_info">No detailed information available for this medicine.</string>
+
+    <!-- Product sections — Cosmetics -->
+    <string name="product_labels">Labels</string>
+    <string name="product_no_cosmetics_info">No detailed information available for this product.</string>
+
+    <!-- ============================================================
+         BARCODE ACTIONS
+         ============================================================ -->
+    <string name="action_open_link">Open Link</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_copy_text">Copy Text</string>
+    <string name="action_copy_url">Copy URL</string>
+    <string name="action_copy_email">Copy Email</string>
+    <string name="action_copy_phone">Copy Phone</string>
+    <string name="action_copy_ssid">Copy SSID</string>
+    <string name="action_copy_barcode">Copy Barcode</string>
+    <string name="action_call">Call</string>
+    <string name="action_send_email">Send Email</string>
+    <string name="action_send_sms">Send SMS</string>
+    <string name="action_connect_wifi">Connect to WiFi</string>
+    <string name="action_add_contact">Add Contact</string>
+    <string name="action_show_raw">View Text</string>
+    <string name="action_add_event">Add to Calendar</string>
+    <string name="action_lookup_product">Product Info</string>
+
+    <!-- Action toasts -->
+    <string name="action_copied">Copied to clipboard</string>
+    <string name="action_wifi_added">WiFi suggestion added: %1$s</string>
+    <string name="action_wifi_open_settings">Open WiFi settings to connect to: %1$s</string>
+    <string name="action_cannot_open_url">Cannot open URL</string>
+    <string name="action_cannot_open_dialer">Cannot open dialer</string>
+    <string name="action_cannot_open_email">Cannot open email app</string>
+    <string name="action_cannot_open_sms">Cannot open SMS app</string>
+    <string name="action_cannot_connect_wifi">Cannot connect to WiFi</string>
+    <string name="action_cannot_open_contacts">Cannot open contacts</string>
+    <string name="action_cannot_open_calendar">Cannot open calendar</string>
+    <string name="action_failed_to_copy">Failed to copy</string>
+
+    <!-- ============================================================
+         ERROR MESSAGES
+         ============================================================ -->
+    <string name="error_offline">No internet connection. Check your network and try again.</string>
+    <string name="error_provider_not_set_up">%1$s isn\'t set up yet.\n\nAdd your %1$s details in Settings → AI Providers.</string>
+    <string name="error_no_response">No response generated</string>
+    <string name="error_file_too_large">File too large (%1$d MB). The maximum size for an AI scan is %2$d MB.</string>
+    <string name="error_unsupported_file">Unsupported file type: %1$s\n\nSupported:\n• PDF files (.pdf)\n• Text files (.txt)\n• Images (.jpg, .png, .webp)\n\nFor Word/PowerPoint/Excel files, please convert to PDF first.</string>
+    <string name="error_failed_read_file">Failed to read the selected files</string>
+    <string name="error_no_files">No files selected</string>
+    <string name="error_http_rate_limit">Provider is rate-limited right now. Try again shortly, or add your own API key in Settings → AI Providers.</string>
+    <string name="error_http_billing">Your API key has hit its usage or billing limit. Check your plan with the provider, then try again.</string>
+    <string name="error_http_auth">Invalid or unauthorized API key. Check it in Settings → AI Providers.</string>
+    <string name="error_http_bad_request">The provider rejected this request (HTTP %1$d). The model ID is usually the cause — check it in Settings → AI Providers, or clear the field to use the default model.</string>
+    <string name="error_http_generic">Request failed (HTTP %1$d)</string>
+    <string name="error_bad_response">The provider sent back something this app can\'t read. Check the endpoint URL and model ID in Settings → AI Providers.</string>
+    <string name="error_unexpected">Something went wrong talking to the provider. Check your settings in Settings → AI Providers and try again.</string>
+    <string name="error_cleartext">This endpoint uses plain http://, which Android blocks. Use an https:// endpoint in Settings → AI Providers.</string>
+    <string name="error_translation_failed">Translation failed. Please try again.</string>
+    <string name="error_summary_failed">Summary failed. Please try again.</string>
+    <string name="error_network_trouble">Connection trouble — retrying in %1$d s (attempt %2$d of %3$d)</string>
+    <string name="error_provider_busy">%1$s is busy — retrying in %2$d s (attempt %3$d of %4$d)</string>
+    <string name="error_all_sources_failed">Couldn\'t reach any product source. Check your connection.</string>
+    <string name="error_no_compatible_engines">No compatible engines</string>
+    <string name="error_searched_sources">Searched %1$d sources</string>
+
+    <!-- ============================================================
+         KEY VERIFICATION
+         ============================================================ -->
+    <string name="verify_enter_key">Enter a key first</string>
+    <string name="verify_enter_account_id">Enter your Account ID first</string>
+    <string name="verify_enter_endpoint">Set the endpoint URL first</string>
+    <string name="verify_invalid_endpoint">That endpoint URL isn\'t valid</string>
+    <string name="verify_cannot_check_endpoint">Can\'t auto-check this endpoint</string>
+    <string name="verify_key_rejected">Key was rejected</string>
+    <string name="verify_offline">You\'re offline</string>
+    <string name="verify_network_error">Network error — try again</string>
+    <string name="verify_provider_error">Provider error — try again</string>
+    <string name="verify_unexpected_response">Unexpected response (HTTP %1$d)</string>
+    <string name="verify_failed">Couldn\'t verify — try again</string>
+
+    <!-- ============================================================
+         HISTORY / STORAGE
+         ============================================================ -->
+    <string name="history_today">Today</string>
+    <string name="history_yesterday">Yesterday</string>
+    <string name="history_date_format">MMM d, yyyy • HH:mm</string>
+
+    <!-- ============================================================
+         PDF HELPER
+         ============================================================ -->
+    <string name="pdf_no_viewer">No PDF viewer found. Install a PDF reader app.</string>
+
+    <!-- ============================================================
+         SHEET / DIALOG TITLES
+         ============================================================ -->
+    <string name="sheet_back">Back</string>
+    <string name="dialog_done">Done</string>
+    <string name="dialog_keep">Keep</string>
+    <string name="dialog_delete">Delete</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_save">Save</string>
+
+    <!-- ============================================================
+         ACCESSIBILITY
+         ============================================================ -->
+    <string name="cd_ai_scan">AI Scan</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_copy">Copy</string>
+    <string name="cd_edit">Edit</string>
+    <string name="cd_export">Export</string>
+    <string name="cd_print">Print</string>
+    <string name="cd_rescan">Rescan</string>
+    <string name="cd_delete">Delete</string>
+    <string name="cd_clear_history">Clear History</string>
+    <string name="cd_rotate_page">Rotate page</string>
+    <string name="cd_delete_page">Delete page</string>
+    <string name="cd_close">Close</string>
+    <string name="cd_capture">Capture</string>
+    <string name="cd_actions">Actions</string>
+
 </resources>
