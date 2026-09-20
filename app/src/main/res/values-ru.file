@@ -1,1 +1,482 @@
-strings.xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ============================================================
+         ПРИЛОЖЕНИЕ
+         ============================================================ -->
+    <string name="app_name">Scanly</string>
+
+    <!-- ============================================================
+         ГЛАВНЫЙ ЭКРАН
+         ============================================================ -->
+    <string name="home_title">Что нужно отсканировать?</string>
+    <string name="home_scan_document">Сканировать документ</string>
+    <string name="home_scan_document_subtitle">Автообрезка, улучшение и экспорт в PDF</string>
+    <string name="home_from_gallery">Из галереи</string>
+    <string name="home_from_gallery_subtitle">Импорт изображения</string>
+    <string name="home_extract_pdf">Извлечь из PDF</string>
+    <string name="home_extract_pdf_subtitle">Импорт PDF-документа</string>
+    <string name="home_scan_barcode">Сканировать штрихкод/QR</string>
+    <string name="home_scan_barcode_subtitle">QR-коды, штрихкоды и другое</string>
+    <string name="home_view_previous">Предыдущие сканы</string>
+    <string name="home_ai_scan">AI-скан</string>
+    <string name="home_settings">Настройки</string>
+
+    <!-- ============================================================
+         ЭКРАН РЕЗУЛЬТАТОВ
+         ============================================================ -->
+    <string name="results_title">Результат</string>
+    <string name="results_extracted_text">Распознанный текст</string>
+    <string name="results_original">Оригинал</string>
+    <string name="results_markdown">Markdown</string>
+    <string name="results_summary">Сводка</string>
+    <string name="results_summary_with_length">Сводка · %1$s</string>
+    <string name="results_copy">Копировать</string>
+    <string name="results_edit">Редактировать</string>
+    <string name="results_print">Печать</string>
+    <string name="results_export">Экспорт</string>
+    <string name="results_save">Сохранить</string>
+    <string name="results_cancel">Отмена</string>
+    <string name="results_back">Назад</string>
+    <string name="results_rescan">Повторить скан</string>
+    <string name="results_copied_to_clipboard">Скопировано в буфер обмена</string>
+    <string name="results_words_characters">%1$d слов · %2$d символов</string>
+    <string name="results_no_text_extracted">Текст не распознан</string>
+    <string name="results_try_different_image">Попробуйте выбрать другое изображение</string>
+    <string name="results_no_text_or_barcodes">Текст или штрихкоды не найдены</string>
+
+    <!-- Длина сводки -->
+    <string name="summary_length_short">Коротко</string>
+    <string name="summary_length_medium">Средне</string>
+    <string name="summary_length_detailed">Подробно</string>
+
+    <!-- ============================================================
+         ЭКРАН СОЗДАНИЯ ТЕКСТА
+         ============================================================ -->
+    <string name="compose_title">Текст в PDF</string>
+    <string name="compose_placeholder">Начните печатать…</string>
+    <string name="compose_export">Экспорт</string>
+
+    <!-- ============================================================
+         ЭКРАН ПРОСМОТРА СКАНА
+         ============================================================ -->
+    <string name="review_title">Просмотр скана</string>
+    <string name="review_page_summary">Страница %1$d из %2$d</string>
+    <string name="review_single_page">1 страница</string>
+    <string name="review_no_pages">Нет страниц</string>
+    <string name="review_enhance">Улучшение</string>
+    <string name="review_save_or_share">Сохранить или поделиться</string>
+    <string name="review_save_or_share_subtitle">PDF, Word или изображения в галерее</string>
+    <string name="review_rotate">Повернуть страницу</string>
+    <string name="review_delete_page">Удалить страницу</string>
+    <string name="review_delete_page_title">Удалить страницу %1$d?</string>
+    <string name="review_delete_page_message">Эта страница не попадёт в экспорт. Вы сможете отсканировать её снова в любой момент.</string>
+    <string name="review_delete">Удалить</string>
+    <string name="review_keep">Оставить</string>
+    <string name="review_nothing_left">Просматривать нечего</string>
+    <string name="review_nothing_left_message">Все страницы удалены. Отсканируйте заново, чтобы начать сначала.</string>
+    <string name="review_back_to_scanner">К сканеру</string>
+
+    <!-- Экспорт -->
+    <string name="export_pdf_document">PDF-документ</string>
+    <string name="export_pdf_document_subtitle">%1$s одним файлом · откроется после сохранения</string>
+    <string name="export_word_document">Word-документ</string>
+    <string name="export_word_document_subtitle">%1$s в формате .docx, один скан на страницу</string>
+    <string name="export_images_to_gallery">Изображения в галерею</string>
+    <string name="export_images_to_gallery_subtitle">%1$s в JPEG в альбоме Scanly</string>
+
+    <!-- Фильтры -->
+    <string name="filter_original">Оригинал</string>
+    <string name="filter_auto">Авто</string>
+    <string name="filter_magic_color">Магический цвет</string>
+    <string name="filter_black_white">Ч/Б</string>
+    <string name="filter_grayscale">Оттенки серого</string>
+
+    <!-- ============================================================
+         ЭКРАН КАМЕРЫ
+         ============================================================ -->
+    <string name="camera_title">Съёмка документа</string>
+    <string name="camera_hint">Нажмите для фокуса · выровняйте страницу по краям</string>
+    <string name="camera_close">Закрыть</string>
+    <string name="camera_capture">Снять</string>
+    <string name="camera_permission_required">Требуется разрешение на камеру.</string>
+    <string name="camera_capture_failed">Не удалось снять — попробуйте ещё раз</string>
+
+    <!-- ============================================================
+         ЭКРАН СКАНЕРА ШТРИХКОДОВ
+         ============================================================ -->
+    <string name="barcode_hint">Наведите камеру на штрихкод или QR-код\nСведите пальцы для масштаба · нажмите для фокуса</string>
+    <string name="barcode_upload_gallery">Загрузить из галереи</string>
+    <string name="barcode_scanning">Сканирование...</string>
+    <string name="barcode_no_barcode_found">Штрихкод не найден</string>
+    <string name="barcode_camera_permission_required">Требуется разрешение на камеру\nдля сканирования штрихкодов.</string>
+    <string name="barcode_detected">Штрихкод распознан</string>
+    <string name="barcode_content">Содержимое штрихкода</string>
+    <string name="barcode_copy_to_clipboard">Скопировать в буфер</string>
+
+    <!-- ============================================================
+         НАСТРОЙКИ
+         ============================================================ -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_customize">Настройка</string>
+    <string name="settings_look_and_feel">Внешний вид</string>
+    <string name="settings_look_and_feel_subtitle">Палитра, тёмная тема, чистый чёрный</string>
+    <string name="settings_ai_providers">AI-провайдеры</string>
+    <string name="settings_ai_providers_subtitle">API-ключи для AI-сканирования</string>
+    <string name="settings_text_recognition">Распознавание текста</string>
+    <string name="settings_text_recognition_subtitle">%1$s · языки и предобработка</string>
+    <string name="settings_barcode_engine">Движок сканера штрихкодов</string>
+    <string name="settings_about">О приложении</string>
+    <string name="settings_source_code">Исходный код</string>
+    <string name="settings_telegram">Telegram</string>
+    <string name="settings_telegram_subtitle">Сообщить об ошибке или предложить идею</string>
+    <string name="settings_contributors">Участники</string>
+    <string name="settings_version">Scanly %1$s (%2$d)</string>
+
+    <!-- ============================================================
+         ВНЕШНИЙ ВИД
+         ============================================================ -->
+    <string name="look_and_feel_title">Внешний вид</string>
+    <string name="look_and_feel_pick_palette">Выберите палитру — приложение перекрасится целиком</string>
+    <string name="look_and_feel_color_palette">Цветовая палитра</string>
+    <string name="look_and_feel_dynamic">Динамическая</string>
+    <string name="look_and_feel_personalize">Персонализация</string>
+    <string name="look_and_feel_dark_theme">Тёмная тема</string>
+    <string name="look_and_feel_dark_theme_on">Вкл</string>
+    <string name="look_and_feel_dark_theme_off">Выкл</string>
+    <string name="look_and_feel_pure_black">Чистый чёрный M3</string>
+    <string name="look_and_feel_pure_black_subtitle">Экономит батарею на OLED-экранах</string>
+    <string name="look_and_feel_wallpaper_colors">Цвета обоев</string>
+
+    <!-- Названия палитр -->
+    <string name="palette_rose_blush">Розовый румянец</string>
+    <string name="palette_cerulean_wave">Лазурная волна</string>
+    <string name="palette_lavender_volt">Лавандовый вольт</string>
+    <string name="palette_amethyst_haze">Аметистовая дымка</string>
+    <string name="palette_emerald_grove">Изумрудная роща</string>
+    <string name="palette_sunset_coral">Закатный коралл</string>
+
+    <!-- ============================================================
+         AI-ПРОВАЙДЕРЫ
+         ============================================================ -->
+    <string name="providers_title">AI-провайдеры</string>
+    <string name="providers_intro">Используйте свой ключ. Ключи хранятся только на этом устройстве и применяются для выбранного провайдера при запуске AI-сканирования.</string>
+    <string name="providers_bundled_note">%1$s всё ещё используют общий бесплатный ключ. Добавьте свой ключ, чтобы использовать личную квоту.</string>
+    <string name="providers_section_providers">Провайдеры</string>
+    <string name="providers_section_advanced">Дополнительно</string>
+    <string name="providers_section_fallback">Резерв</string>
+    <string name="providers_fallback_title">Переключаться на других провайдеров</string>
+    <string name="providers_fallback_subtitle">Если выбранный провайдер не отвечает, попробовать другие настроенные вместо остановки. По умолчанию выключено — выбранный провайдер используется всегда точно.</string>
+    <string name="providers_api_key">API-ключ</string>
+    <string name="providers_api_token">API-токен</string>
+    <string name="providers_model">Модель</string>
+    <string name="providers_endpoint_url">URL эндпоинта</string>
+    <string name="providers_account_id">ID аккаунта</string>
+    <string name="providers_show_key">Показать ключ</string>
+    <string name="providers_hide_key">Скрыть ключ</string>
+    <string name="providers_verify_key">Проверить ключ</string>
+    <string name="providers_verifying">Проверка…</string>
+    <string name="providers_verified">Проверен</string>
+    <string name="providers_invalid">Недействителен</string>
+    <string name="providers_unverified">Не проверен</string>
+    <string name="providers_retry">Повторить</string>
+    <string name="providers_get_key">Получить ключ %1$s</string>
+    <string name="providers_get_cloudflare_token">Получить токен Cloudflare</string>
+    <string name="providers_required">Обязательно — у этого провайдера нет модели по умолчанию</string>
+    <string name="providers_required_cloudflare">Обязательно — Cloudflare нужен и ID аккаунта, и токен</string>
+    <string name="providers_url_hint">Введите полный URL с https://</string>
+    <string name="providers_will_call">Будет вызов %1$s</string>
+
+    <!-- Описания провайдеров -->
+    <string name="provider_gemini_desc">Google AI · работает из коробки. Добавьте ключ, чтобы использовать свою квоту.</string>
+    <string name="provider_mistral_desc">Специализированная OCR-модель · быстро и точно. Есть бесплатный тариф.</string>
+    <string name="provider_openrouter_desc">Один ключ — много моделей.</string>
+    <string name="provider_huggingface_desc">Qwen OCR через HF Inference. Есть бесплатный тариф.</string>
+    <string name="provider_nvidia_desc">NVIDIA NIM · vision-модели на API NVIDIA. Есть бесплатный тариф.</string>
+    <string name="provider_groq_desc">Groq LPU · очень быстрое инференс. Есть бесплатный тариф.</string>
+    <string name="provider_cerebras_desc">Cerebras · сверхбыстрый Gemma-4 vision. Есть бесплатный тариф.</string>
+    <string name="provider_openai_desc">GPT vision-модели.</string>
+    <string name="provider_claude_desc">Vision-модели Anthropic.</string>
+    <string name="provider_cloudflare_desc">Workers AI · vision на границе Cloudflare. Есть бесплатный тариф; добавьте свой ID аккаунта и токен.</string>
+    <string name="provider_custom_desc">Любой OpenAI-совместимый chat/completions API.</string>
+
+    <!-- ============================================================
+         РАСПОЗНАВАНИЕ ТЕКСТА
+         ============================================================ -->
+    <string name="ocr_title">Распознавание текста</string>
+    <string name="ocr_section_engine">Движок</string>
+    <string name="ocr_section_script">Язык</string>
+    <string name="ocr_section_preprocessing">Предобработка</string>
+    <string name="ocr_section_structure">Структура документа</string>
+    <string name="ocr_engine_paddle_desc">Высокая точность, 50+ языков, полностью офлайн</string>
+    <string name="ocr_engine_mlkit_desc">Распознаватель Google, самый быстрый</string>
+    <string name="ocr_auto_rotate">Автоповорот страницы</string>
+    <string name="ocr_auto_rotate_subtitle">Определяет страницы боком и вверх ногами</string>
+    <string name="ocr_fix_flipped">Исправлять перевёрнутые строки</string>
+    <string name="ocr_fix_flipped_subtitle">Для страниц со смешанными строками.</string>
+    <string name="ocr_flatten_curved">Выпрямлять изогнутые страницы</string>
+    <string name="ocr_flatten_curved_download">UVDoc · 30 МБ для скачивания</string>
+    <string name="ocr_flatten_curved_active">UVDoc — медленнее, для книг и сгибов</string>
+    <string name="ocr_detect_layout">Определять разметку</string>
+    <string name="ocr_detect_layout_subtitle">Заголовки, абзацы и порядок чтения в Markdown</string>
+    <string name="ocr_recognize_tables">Распознавать таблицы</string>
+    <string name="ocr_recognize_tables_download">SLANet · 8 МБ для скачивания</string>
+    <string name="ocr_recognize_tables_active">Собирает таблицы в сетки, которые можно экспортировать в CSV</string>
+    <string name="ocr_downloading_progress">Скачивание %1$d%%</string>
+    <string name="ocr_delete_pack">Удалить %1$s</string>
+    <string name="ocr_download_pack">Скачать %1$s</string>
+
+    <!-- ============================================================
+         ДИАЛОГ ДВИЖКА ШТРИХКОДОВ
+         ============================================================ -->
+    <string name="barcode_engine_title">Движок сканера штрихкодов</string>
+    <string name="barcode_engine_mlkit_desc">Сканер Google с авто-зумом</string>
+    <string name="barcode_engine_zxing_desc">Открытый декодер, работает без GMS</string>
+    <string name="barcode_engine_done">Готово</string>
+
+    <!-- ============================================================
+         ИСТОРИЯ
+         ============================================================ -->
+    <string name="history_title">История</string>
+    <string name="history_clear_all">Очистить всё</string>
+    <string name="history_no_history">История пуста</string>
+    <string name="history_clear_confirm_title">Очистить историю</string>
+    <string name="history_clear_confirm_message">Удалить всю историю? Это действие нельзя отменить.</string>
+    <string name="history_delete_all">Удалить всё</string>
+    <string name="history_cancel">Отмена</string>
+    <string name="history_delete">Удалить</string>
+
+    <!-- ============================================================
+         ЭКРАН ОГРАНИЧЕНИЯ
+         ============================================================ -->
+    <string name="rate_limit_title">Бесплатным сканам нужна передышка</string>
+    <string name="rate_limit_message">AI в Scanly работает на бесплатных ключах разработчика, общих для всех, — поэтому сканы на мгновение замирают, когда все ими пользуются.</string>
+    <string name="rate_limit_add_key">Добавьте свой ключ для любого провайдера в Настройки → AI-провайдеры, чтобы убрать лимит полностью. Подойдёт даже бесплатный — он будет работать на вашей квоте, а не на общей.</string>
+    <string name="rate_limit_remaining">осталось %1$s</string>
+    <string name="rate_limit_watch_ad">Посмотреть рекламу за 1 скан</string>
+    <string name="rate_limit_no_ad">Реклама сейчас недоступна</string>
+    <string name="rate_limit_dismiss">Закрыть</string>
+
+    <!-- ============================================================
+         ЛИСТ AI-РЕЖИМА
+         ============================================================ -->
+    <string name="ai_scan_title">AI-скан</string>
+    <string name="ai_scan_provider">ПРОВАЙДЕР</string>
+    <string name="ai_scan_extract_text">Извлечь текст</string>
+    <string name="ai_scan_extract_text_subtitle">Извлечь видимый текст из изображения</string>
+    <string name="ai_scan_extract_pdf">Извлечь из PDF</string>
+    <string name="ai_scan_extract_pdf_subtitle">AI-извлечение текста из PDF и текстовых файлов</string>
+
+    <!-- ============================================================
+         СОСТОЯНИЯ ОБРАБОТКИ
+         ============================================================ -->
+    <string name="processing_preparing">Подготовка…</string>
+    <string name="processing_uploading">Загрузка…</string>
+    <string name="processing_processing">Обработка…</string>
+    <string name="processing_generating">Генерация…</string>
+    <string name="processing_complete">Готово</string>
+    <string name="processing_extracting_files">Извлечение текста из %1$d файлов…</string>
+    <string name="processing_extracting">Извлечение текста...</string>
+    <string name="processing_files_one_request">%1$d файлов в одном запросе</string>
+    <string name="processing_may_take">Это может занять несколько секунд</string>
+    <string name="processing_translating">Перевод...</string>
+    <string name="processing_summarizing">Создание сводки...</string>
+
+    <!-- ============================================================
+         ЭКСПОРТ
+         ============================================================ -->
+    <string name="export_save_pdf">Сохранить как PDF</string>
+    <string name="export_save_word">Сохранить как Word (.docx)</string>
+    <string name="export_save_markdown">Сохранить как Markdown</string>
+    <string name="export_save_csv">Сохранить как CSV</string>
+    <string name="export_save_json">Сохранить как JSON</string>
+    <string name="export_no_table">Нет таблицы</string>
+    <string name="export_nothing">Нечего экспортировать</string>
+    <string name="export_no_table_data">Нет данных таблицы для экспорта</string>
+    <string name="export_saved">Сохранено в Downloads/Scanly</string>
+    <string name="export_failed">Не удалось сохранить %1$s</string>
+
+    <!-- Диалог имени файла -->
+    <string name="export_dialog_title">Имя файла</string>
+    <string name="export_dialog_label">Имя файла</string>
+    <string name="export_dialog_hint">Предложено из распознанного текста, полностью на вашем устройстве.</string>
+    <string name="export_dialog_save">Сохранить</string>
+    <string name="export_dialog_cancel">Отмена</string>
+
+    <!-- ============================================================
+         БЕЙДЖ ПРОВАЙДЕРА
+         ============================================================ -->
+    <string name="credential_built_in">Встроенный</string>
+    <string name="credential_your_key">Ваш ключ</string>
+
+    <!-- ============================================================
+         ПРОДУКТЫ
+         ============================================================ -->
+    <string name="product_looking_up">Поиск продукта...</string>
+    <string name="product_not_found">Продукт не найден</string>
+    <string name="product_searched">Поиск в: %1$s</string>
+    <string name="product_lookup_failed">Поиск не удался</string>
+    <string name="product_unknown_error">Неизвестная ошибка</string>
+    <string name="product_unknown_name">Неизвестный продукт</string>
+    <string name="product_via">через %1$s</string>
+
+    <!-- Продукты — Еда -->
+    <string name="product_nutri_score">Nutri-Score</string>
+    <string name="product_nova_group">Группа NOVA</string>
+    <string name="product_nutrition_facts">Пищевая ценность</string>
+    <string name="product_serving_size">Порция: %1$s</string>
+    <string name="product_ingredients">Состав</string>
+    <string name="product_allergens">Аллергены</string>
+    <string name="product_calories">Калории</string>
+    <string name="product_fat">Жиры</string>
+    <string name="product_carbs">Углеводы</string>
+    <string name="product_protein">Белки</string>
+    <string name="product_sugar">Сахар</string>
+    <string name="product_salt">Соль</string>
+    <string name="product_fiber">Клетчатка</string>
+    <string name="product_no_nutrition">Подробная информация о пищевой ценности для этого продукта отсутствует.</string>
+
+    <!-- Продукты — Книги -->
+    <string name="product_authors">Авторы</string>
+    <string name="product_publisher">Издательство</string>
+    <string name="product_published">Опубликовано</string>
+    <string name="product_pages">Страниц</string>
+    <string name="product_language">Язык</string>
+    <string name="product_categories">Категории</string>
+    <string name="product_isbn13">ISBN-13: %1$s</string>
+    <string name="product_isbn10">ISBN-10: %1$s</string>
+    <string name="product_no_book_info">Подробная информация об этой книге отсутствует.</string>
+
+    <!-- Продукты — Лекарства -->
+    <string name="product_generic_name">МНН</string>
+    <string name="product_manufacturer">Производитель</string>
+    <string name="product_active_ingredients">Действующие вещества</string>
+    <string name="product_dosage_form">Форма выпуска</string>
+    <string name="product_route">Способ введения</string>
+    <string name="product_warnings">Предупреждения</string>
+    <string name="product_contraindications">Противопоказания</string>
+    <string name="product_indications">Показания</string>
+    <string name="product_fda_approved">Одобрено FDA: %1$s</string>
+    <string name="product_recalled">⚠️ Этот продукт был отозван FDA.</string>
+    <string name="product_no_medicine_info">Подробная информация об этом лекарстве отсутствует.</string>
+
+    <!-- Продукты — Косметика -->
+    <string name="product_labels">Метки</string>
+    <string name="product_no_cosmetics_info">Подробная информация об этом продукте отсутствует.</string>
+
+    <!-- ============================================================
+         ДЕЙСТВИЯ ШТРИХКОДОВ
+         ============================================================ -->
+    <string name="action_open_link">Открыть ссылку</string>
+    <string name="action_copy">Копировать</string>
+    <string name="action_copy_text">Копировать текст</string>
+    <string name="action_copy_url">Копировать URL</string>
+    <string name="action_copy_email">Копировать email</string>
+    <string name="action_copy_phone">Копировать телефон</string>
+    <string name="action_copy_ssid">Копировать SSID</string>
+    <string name="action_copy_barcode">Копировать штрихкод</string>
+    <string name="action_call">Позвонить</string>
+    <string name="action_send_email">Отправить email</string>
+    <string name="action_send_sms">Отправить SMS</string>
+    <string name="action_connect_wifi">Подключиться к Wi-Fi</string>
+    <string name="action_add_contact">Добавить контакт</string>
+    <string name="action_show_raw">Показать текст</string>
+    <string name="action_add_event">Добавить в календарь</string>
+    <string name="action_lookup_product">Информация о продукте</string>
+
+    <!-- Уведомления действий -->
+    <string name="action_copied">Скопировано в буфер обмена</string>
+    <string name="action_wifi_added">Wi-Fi добавлен: %1$s</string>
+    <string name="action_wifi_open_settings">Откройте настройки Wi-Fi для подключения к: %1$s</string>
+    <string name="action_cannot_open_url">Не удалось открыть ссылку</string>
+    <string name="action_cannot_open_dialer">Не удалось открыть набор</string>
+    <string name="action_cannot_open_email">Не удалось открыть почту</string>
+    <string name="action_cannot_open_sms">Не удалось открыть SMS</string>
+    <string name="action_cannot_connect_wifi">Не удалось подключиться к Wi-Fi</string>
+    <string name="action_cannot_open_contacts">Не удалось открыть контакты</string>
+    <string name="action_cannot_open_calendar">Не удалось открыть календарь</string>
+    <string name="action_failed_to_copy">Не удалось скопировать</string>
+
+    <!-- ============================================================
+         ОШИБКИ
+         ============================================================ -->
+    <string name="error_offline">Нет подключения к интернету. Проверьте сеть и попробуйте снова.</string>
+    <string name="error_provider_not_set_up">%1$s ещё не настроен.\n\nДобавьте данные %1$s в Настройки → AI-провайдеры.</string>
+    <string name="error_no_response">Ответ не получен</string>
+    <string name="error_file_too_large">Файл слишком большой (%1$d МБ). Максимум для AI-скана — %2$d МБ.</string>
+    <string name="error_unsupported_file">Неподдерживаемый тип файла: %1$s\n\nПоддерживаются:\n• PDF (.pdf)\n• Текст (.txt)\n• Изображения (.jpg, .png, .webp)\n\nДля Word/PowerPoint/Excel сначала сконвертируйте в PDF.</string>
+    <string name="error_failed_read_file">Не удалось прочитать выбранные файлы</string>
+    <string name="error_no_files">Файлы не выбраны</string>
+    <string name="error_http_rate_limit">Провайдер сейчас ограничен по частоте. Попробуйте чуть позже или добавьте свой ключ в Настройки → AI-провайдеры.</string>
+    <string name="error_http_billing">Достигнут лимит использования или оплаты вашего API-ключа. Проверьте тариф у провайдера и попробуйте снова.</string>
+    <string name="error_http_auth">Неверный или неавторизованный API-ключ. Проверьте в Настройки → AI-провайдеры.</string>
+    <string name="error_http_bad_request">Провайдер отклонил запрос (HTTP %1$d). Обычно причина в ID модели — проверьте его в Настройки → AI-провайдеры или очистите поле, чтобы использовать модель по умолчанию.</string>
+    <string name="error_http_generic">Запрос не удался (HTTP %1$d)</string>
+    <string name="error_bad_response">Провайдер прислал ответ, который приложение не может прочитать. Проверьте URL эндпоинта и ID модели в Настройки → AI-провайдеры.</string>
+    <string name="error_unexpected">Что-то пошло не так при обращении к провайдеру. Проверьте настройки в Настройки → AI-провайдеры и попробуйте снова.</string>
+    <string name="error_cleartext">Этот эндпоинт использует обычный http://, который Android блокирует. Используйте https:// в Настройки → AI-провайдеры.</string>
+    <string name="error_translation_failed">Перевод не удался. Попробуйте снова.</string>
+    <string name="error_summary_failed">Не удалось создать сводку. Попробуйте снова.</string>
+    <string name="error_network_trouble">Проблемы с соединением — повтор через %1$d с (попытка %2$d из %3$d)</string>
+    <string name="error_provider_busy">%1$s занят — повтор через %2$d с (попытка %3$d из %4$d)</string>
+    <string name="error_all_sources_failed">Не удалось связаться ни с одним источником. Проверьте соединение.</string>
+    <string name="error_no_compatible_engines">Нет подходящих движков</string>
+    <string name="error_searched_sources">Проверено источников: %1$d</string>
+
+    <!-- ============================================================
+         ПРОВЕРКА КЛЮЧА
+         ============================================================ -->
+    <string name="verify_enter_key">Сначала введите ключ</string>
+    <string name="verify_enter_account_id">Сначала введите ID аккаунта</string>
+    <string name="verify_enter_endpoint">Укажите URL эндпоинта</string>
+    <string name="verify_invalid_endpoint">Этот URL недействителен</string>
+    <string name="verify_cannot_check_endpoint">Этот эндпоинт нельзя проверить автоматически</string>
+    <string name="verify_key_rejected">Ключ отклонён</string>
+    <string name="verify_offline">Нет подключения к интернету</string>
+    <string name="verify_network_error">Ошибка сети — попробуйте снова</string>
+    <string name="verify_provider_error">Ошибка провайдера — попробуйте снова</string>
+    <string name="verify_unexpected_response">Неожиданный ответ (HTTP %1$d)</string>
+    <string name="verify_failed">Не удалось проверить — попробуйте снова</string>
+
+    <!-- ============================================================
+         ИСТОРИЯ / ХРАНИЛИЩЕ
+         ============================================================ -->
+    <string name="history_today">Сегодня</string>
+    <string name="history_yesterday">Вчера</string>
+    <string name="history_date_format">d MMM yyyy • HH:mm</string>
+
+    <!-- ============================================================
+         PDF
+         ============================================================ -->
+    <string name="pdf_no_viewer">Приложение для просмотра PDF не найдено. Установите PDF-читалку.</string>
+
+    <!-- ============================================================
+         ОБЩИЕ ЗАГОЛОВКИ
+         ============================================================ -->
+    <string name="sheet_back">Назад</string>
+    <string name="dialog_done">Готово</string>
+    <string name="dialog_keep">Оставить</string>
+    <string name="dialog_delete">Удалить</string>
+    <string name="dialog_cancel">Отмена</string>
+    <string name="dialog_save">Сохранить</string>
+
+    <!-- ============================================================
+         ДОСТУПНОСТЬ
+         ============================================================ -->
+    <string name="cd_ai_scan">AI-скан</string>
+    <string name="cd_settings">Настройки</string>
+    <string name="cd_back">Назад</string>
+    <string name="cd_copy">Копировать</string>
+    <string name="cd_edit">Редактировать</string>
+    <string name="cd_export">Экспорт</string>
+    <string name="cd_print">Печать</string>
+    <string name="cd_rescan">Повторить скан</string>
+    <string name="cd_delete">Удалить</string>
+    <string name="cd_clear_history">Очистить историю</string>
+    <string name="cd_rotate_page">Повернуть страницу</string>
+    <string name="cd_delete_page">Удалить страницу</string>
+    <string name="cd_close">Закрыть</string>
+    <string name="cd_capture">Снять</string>
+    <string name="cd_actions">Действия</string>
+
+</resources>
